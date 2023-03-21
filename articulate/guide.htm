@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Articulate.js - The Developers Guide</title>
+  <meta name="description" content="A comprehensive listing of all the Articulate.js functions and properties.">
+  <meta property="og:title" content="Articulate.js - The Developers Guide">
+  <meta property="og:description" content="A comprehensive listing of all the Articulate.js functions and properties.">
+  <meta property="og:site_name" content="Articulate.js">
+
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+  <script src="assets/js/code.js"></script>
+  <script src="assets/js/articulate.min.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i,800i" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="guide">
+
+  <header>
+    <h1>Articulate.js</h1>
+    <h2>Let the Browser Speak to You</h2>
+  </header>
+  
+  <div class="page-container group">
+
+    <nav>
+      <ul>
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="demos.htm">Demos</a></li>
+        <li><a href="guide.htm">Guide</a></li>
+        <li><a href="https://github.com/acoti/articulate.js" rel="newWindow">Download</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <p>Please note that, except for specifying which DOM elements to speak, Articulate.js ignores the jQuery selector when executing functions or
+      reading attributes.</p>
+
+
+      <h3>Basic Functions</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code>$(selector).articulate('speak');</code></td>
+          <td>Speaks aloud the specified DOM element(s) and their descendants</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('pause');</code></td>
+          <td>Pauses the speaking</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('resume');</code></td>
+          <td>Resumes the speaking after it has been paused</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('stop');</code></td>
+          <td>Stops the speaking permanently</td>
+        </tr>
+      </table>
+
+      
+     <h3>Voice Parameters</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code>$().articulate('rate',<i>number</i>);</code></td>
+          <td>Sets the rate of the speaking voice<br>Default = 1.1<br>Range = [0.1 - 10]</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('pitch',<i>number</i>);</code></td>
+          <td>Sets the pitch of the speaking voice<br>Default = 1.0<br>Range = [0 - 2]</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('volume',<i>number</i>);</code></td>
+          <td>Sets the volume of the speaking voice<br>Default = 1.0<br>Range = [0 - 1]</td>
+        </tr>
+      </table>
+
+      <p class="note"><b>Note:</b> Omitting <code><i>number</i></code> resets the parameter to its default value; 
+      changes take effect only when next <q>speak</q> call is made</p>
+
+      
+      <h3>Read-Only Attributes</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code>$().articulate('enabled');</code></td>
+          <td>Returns (<code>true</code> | <code>false</code>) specifying whether the browser supports the Web Speech API</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('isSpeaking');</code></td>
+          <td>Returns (<code>true</code> | <code>false</code>) specifying whether speaking has not yet been completed or stopped</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('isPaused');</code></td>
+          <td>Returns (<code>true</code> | <code>false</code>) specifying whether speaking is paused</td>
+        </tr>
+      </table>
+
+      <p class="note"><b>Note:</b> <code>$().articulate('isSpeaking');</code> returns the value of <code>true</code> even when paused</p>
+      
+
+      <h3>Get and Set Voices</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code>$().articulate('getVoices');</code></td>
+          <td>Returns an array of voice objects; each object has two properties: name and language</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('getVoices',<i>selector</i>,<i>text</i>);</code></td>
+          <td>Populates the DOM element(s) <code><i>selector</i></code> with a dropdown menu for voice selection; optional <code><i>text</i></code> overwrites default dropdown menu instruction</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('setVoice','name',<i>voice</i>);</code></td>
+          <td>Sets <code><i>voice</i></code>; must match exactly one of the names returned when using <code>getVoices</code></td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('setVoice','language',<i>twoDigit</i>);</code></td>
+          <td>Sets voice by finding the first voice that matches the <code><i>twoDigit</i></code> language code; this is case-insensitive</td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('setVoice','language',<i>code</i>);</code></td>
+          <td>Sets voice by finding the first voice that exactly matches the complete language code</td>
+        </tr>
+      </table>
+
+      <p class="note"><b>Note:</b> Default text for <code>getVoices</code> dropdown menu is: <q>Choose a Different Voice</q>.</p>
+      
+      <p class="note"><b>Note:</b> Language codes consist of two-characters that specify the language, followed by a hyphen, followed by additional characters
+      that specify the particular country or regional dialect of that language. For example, the codes <q>en-US</q> and <q>en-GB</q> are both English language, but
+      each represent a different country.</p>
+      
+      <p class="note">Setting a voice by specifying only a two-digit language code is useful for when you have text on the page in another language, but
+      don't want to bother checking to see if that language is available. For example, a page otherwise in English may have a paragraph in German that you want spoken. 
+      That paragraph can have a link like this: <code>$('p').articulate('setVoice','language','de').articulate('speak');</code>. If the German language is 
+      available, it will be appropriately spoken. If not, the current voice will remain.</p>
+
+
+      <h3>Text Manipulation</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code>$().articulate('ignore',<i>tagName</i>,<i>tagName</i>,...);</code></td>
+          <td>
+            Adds one or more HTML tags to the default array of ignored HTML tags;
+            omitting <code><i>tagName</i></code> clears the array of user-specified ignored HTML tags; see table below 
+          </td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('recognize',<i>tagName</i>,<i>tagName</i>,...);</code></td>
+          <td>
+            Removes one or more HTML tags from the default array of ignored HTML tags;
+            omitting <code><i>tagName</i></code> clears the array of user-specified recognized HTML tags; see table below 
+          </td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('replace',<i>oldText</i>,<i>newText</i>,...);</code></td>
+          <td>
+            Replaces <code><i>oldText</i></code> with <code><i>newText</i></code> when speaking; this is case-insensitive; multiple pairs
+            of text can be specified; omitting parameters deletes previous replace commands
+          </td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('customize',<i>tagName</i>,<i>prepend</i>);</code></td>
+          <td>
+            Replaces default text spoken prior to the description of the HTML tags <code>&lt;img&gt;</code>, <code>&lt;table&gt;</code>, and <code>&lt;figure&gt;</code>;
+            omitting parameters reverts values to its defaults; see table below
+          </td>
+        </tr>
+        <tr>
+          <td><code>$().articulate('customize',<i>tagName</i>,<i>prepend</i>,<i>append</i>);</code></td>
+          <td>
+            Replaces default text spoken prior to and after the content of the HTML tags <code>&lt;q&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, and <code>&lt;blockquote&gt;</code>;
+            omitting parameters reverts values to its defaults; see table below
+          </td>
+        </tr>
+      </table>
+      
+
+      <h3>HTML Data Attributes</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code>data-articulate-ignore</code></td>
+          <td>Content from that DOM element and its descendents are ignored</td>
+        </tr>
+        <tr>
+          <td><code>data-articulate-recognize</code></td>
+          <td>Content from that DOM element is spoken, overriding the default</td>
+        </tr>
+        <tr>
+          <td><code>data-articulate-spell</code></td>
+          <td>Content from that DOM element is spelled out</td>
+        </tr>
+        <tr>
+          <td><code>data-articulate-prepend=<i>text</i></code></td>
+          <td>Specified <code><i>text</i></code> is spoken prior to the content of its DOM element</td>
+        </tr>
+        <tr>
+          <td><code>data-articulate-append=<i>text</i></code></td>
+          <td>Specified <code><i>text</i></code> is spoken after to the content of its DOM element</td>
+        </tr>
+        <tr>
+          <td><code>data-articulate-swap=<i>text</i></code></td>
+          <td>Specified <code><i>text</i></code> is spoken in place of the content of its DOM element</td>
+        </tr>
+      </table>
+      
+
+      <h3>Miscellaneous</h3>
+
+      <table class="guide">
+        <tr>
+          <td><code style="white-space: nowrap">&lt;!-- &lt;articulate&gt;<i>text</i>&lt;/articulate&gt; --&gt;</code></td>
+          <td>
+            Specified <code><i>text</i></code> is spoken when encountered in the HTML; the syntax must match exactly &mdash;
+            one space separating the opening and closing &lt;articulate&gt; tags and their neighboring comment markers
+          </td>
+        </tr>
+      </table>
+
+
+      <h3>Reference Information</h3>
+
+      <p>Chaining calls is acceptable. For example, the following works just fine:</p>
+
+      <p class="code"><code>$('article').articulate('rate',1.3).articulate('speak');</code></p>
+
+      <br>
+
+      <table class="guide">
+        <tr>
+          <td>Default Array of Ignored HTML Tags</td>
+          <td>
+            <code>audio</code>, <code>button</code>, <code>canvas</code>, <code>code</code>, <code>del</code>, <code>dialog</code>, <code>dl</code>, 
+            <code>embed</code>, <code>form</code>, <code>head</code>, <code>iframe</code>, <code>meter</code>, <code>nav</code>, <code>noscript</code>, 
+            <code>object</code>, <code>s</code>, <code>script</code>, <code>select</code>, <code>style</code>, <code>textarea</code>, <code>video</code>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <table class="guide">
+        <tr>
+          <th>HTML Tag</th>
+          <th>Default Prepend Text</th>
+          <th>Default Append Text</th>
+        </tr>
+        <tr>
+          <td><code>&lt;img&gt;</code></td>
+          <td>There's an embedded image with the description,</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td><code>&lt;table&gt;</code></td>
+          <td>There's an embedded table with the caption,</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td><code>&lt;figure&gt;</code></td>
+          <td>There's an embedded figure with the caption,</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td><code>&lt;q&gt;</code> and <code>“ ”</code></td>
+          <td>Quote,</td>
+          <td>, Unquote,</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ol&gt;</code></td>
+          <td>Start of list.</td>
+          <td>End of list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul&gt;</code></td>
+          <td>Start of list.</td>
+          <td>End of list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;blockquote&gt;</code></td>
+          <td>Blockquote start.</td>
+          <td>Blockquote end.</td>
+        </tr>
+      </table>
+
+      <p class="note"><b>Note:</b> A comma followed by a space results in a pause when spoken; a period results in a slightly longer pause</p>
+      
+    </main>
+
+    <footer>
+      <div class="copyright">&copy; 2023 Adam Coti. All rights reserved.</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

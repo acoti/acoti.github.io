@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>An Analysis of Scorelines at Tennis Majors - Purefreedom Tennis</title>
+  <meta name="description" content="Exploring the numbers behind playing best-of-five sets at tennis majors.">
+  <meta property="og:title" content="An Analysis of Scorelines at Tennis Majors - Purefreedom Tennis">
+  <meta property="og:description" content="Exploring the numbers behind playing best-of-five sets at tennis majors.">
+  <meta property="og:site_name" content="Purefreedom Tennis">
+
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+  <script src="assets/js/highcharts.js"></script>
+  <script src="assets/js/jquery.highchartTable.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/code.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i,700" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="content-container">
+
+    <main>
+      <h1>An Analysis of Scorelines at Tennis Majors from 2000-2016</h1>
+
+      <div class="author">By Adam Coti<br><a href="http://www.purefreedom.com" class="newWindow">www.purefreedom.com</a></div>
+
+      <div class="back-to-home"><a href="../index.htm">Back to Home Page</a></div>
+
+      <h2>Introduction</h2>
+
+      <p>For more than 100 years, men have played best-of-five sets at the four professional tennis majors. There has been, 
+      however, much debate on social media and elsewhere about the merits of moving to a best-of-three format. Ben Rothenberg of 
+      <i>The New York Times</i>, a vocal proponent of shortening matches, wrote an 
+      <a href="http://www.nytimes.com/2012/08/27/sports/tennis/building-your-dream-open-get-to-the-point-in-fewer-sets.html" class="newWindow">article</a> 
+      five years ago stating this case. But, for an issue that generates passionate opinions, it is rare to see actual statistics cited.</p>
+
+      <p>To satisfy my own curiosity, I analyzed the scoreline of every match at a major from 2000 through 2016, which
+      encompasses 8,253 matches after walkovers and retirements are considered. The data is cross-referenced by year, venue,
+      in which round the match occurred as well as its duration. What follows are the more interesting results that I found.</p>
+
+      <h2>Global Results</h2>
+
+      <p>The following charts are based on all completed matches at majors from 2000-2016 less retirements and walkovers. This totals 
+      8,253 matches. Week One refers to the first three rounds of a major; Week Two is from the Round of 16 onward.</p>
+
+
+
+      <section>
+        <h3>How many sets does the average match last?</h3>
+
+        <div class="answer">The average men’s match lasts 3.69 sets</div>
+
+        <div class="chart desktop" id="number-of-sets"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-1.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Three Sets</th>
+              <th>Four Sets</th>
+              <th>Five Sets</th>
+              <th>Average<br>Match Length</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="solid">
+              <td>All</td>
+              <td>50.16%</td>
+              <td>30.78%</td>
+              <td>19.06%</td>
+              <td>3.69 sets</td>
+            </tr>
+            <tr>
+              <td class="indent">Week One</td>
+              <td>50.45%</td>
+              <td>30.61%</td>
+              <td>18.94%</td>
+              <td>3.68 sets</td>
+            </tr>
+            <tr>
+              <td class="indent">Week Two</td>
+              <td>48.08%</td>
+              <td>31.98%</td>
+              <td>19.94%</td>
+              <td>3.72 sets</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Overall, almost exactly half of all matches ended in a straight-sets victory.</p></li>
+            <li><p>The proportion of three-set matches drops in Week 2 when there are more four-set and five-set matches played.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <section>
+        <h3>What is the breakdown of these matches?</h3>
+
+        <div class="answer">The ten possible scorelines are represented below:</div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-2.png" alt=""></div>
+
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr class="center">
+              <th>Set 1<br>Set 2<br>Set 3<br>Set 4<br>Set 5</th>
+              <th>W<br>W<br>W<br><br><br></th>
+              <th>W<br>W<br>L<br>W<br><br></th>
+              <th>W<br>L<br>W<br>W<br><br></th>
+              <th>L<br>W<br>W<br>W<br><br></th>
+              <th>W<br>W<br>L<br>L<br>W</th>
+              <th>W<br>L<br>W<br>L<br>W</th>
+              <th>L<br>W<br>W<br>L<br>W</th>
+              <th>W<br>L<br>L<br>W<br>W</th>
+              <th>L<br>W<br>L<br>W<br>W</th>
+              <th>L<br>L<br>W<br>W<br>W</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="center">
+              <td>Percent</td>
+              <td>50.16%</td>
+              <td>9.12%</td>
+              <td>9.89%</td>
+              <td>11.77%</td>
+              <td>3.10%</td>
+              <td>2.39%</td>
+              <td>2.98%</td>
+              <td>3.43%</td>
+              <td>3.08%</td>
+              <td>4.08%</td>
+            </tr>
+            <tr class="center">
+              <td>Raw</td>
+              <td>4,140</td>
+              <td>753</td>
+              <td>816</td>
+              <td>971</td>
+              <td>256</td>
+              <td>197</td>
+              <td>246</td>
+              <td>283</td>
+              <td>254</td>
+              <td>337</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The winner of the first set goes on to win <b>78.09%</b> of the matches.</p></li>
+            <li><p>The winner of the first two sets goes on to win <b>93.86%</b> of the matches.</p></li>
+            <li><p>If the first two sets are split, the winner of the third set goes on to win <b>80.59%</b> of the matches.</p></li>
+            <li><p>All other things equal, the winner of his best-of-five match would've lost <b>10.59%</b> of the time if it had been played as a best-of-three match.</p></li>
+            <li><p>The most common four-set scoreline is when the winner loses the first set only to win the next three.</p></li>
+            <li><p>The most common five-set scoreline is when the winner loses the first two sets only to win the next three.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <section>
+        <h3>How long does the average match last?</h3>
+
+        <div class="answer">The average duration of a match <span class="keep-together">is 2 hours 28 minutes</span></div>
+
+        <div class="chart desktop" id="length-of-match"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-3.png" alt=""></div>
+
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Three Sets</th>
+              <th>Four Sets</th>
+              <th>Five Sets</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="solid">
+              <td>All</td>
+              <td><!-- 114.17 -->1h 54m</td>
+              <td><!-- 162.89 -->2h 43m</td>
+              <td><!-- 209.94 -->3h 30m</td>
+              <td><!-- 147.72 -->2h 28m</td>
+            </tr>
+            <tr>
+              <td class="indent">Week One</td>
+              <td><!-- 113.18 -->1h 53m</td>
+              <td><!-- 161.45 -->2h 41m</td>
+              <td><!-- 208.36 -->3h 28m</td>
+              <td><!-- 145.98 -->2h 26m</td>
+            </tr>
+            <tr>
+              <td class="indent">Week Two</td>
+              <td><!-- 121.85 -->2h 02m</td>
+              <td><!-- 173.04 -->2h 53m</td>
+              <td><!-- 220.92 -->3h 41m</td>
+              <td><!-- 157.98 -->2h 38m</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The average duration of a set is <b>39 minutes 58 seconds</b>.</p></li>
+            <li><p>The average duration of a match increases by <b>12 minutes</b> in Week Two as compared to Week One.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <h2>Results by Major</h2>
+
+      <p>The following charts are for the seventeen years of results further broken down by the four majors. The majors are listed in the 
+      order of their appearance in the calendar year.</p>
+
+      <section>
+        <h3>How Many Sets Does the Average Match Last?</h3>
+
+        <div class="chart desktop" id="length-of-match-venue"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-4.png" alt=""></div>
+
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Three Sets</th>
+              <th>Four Sets</th>
+              <th>Five Sets</th>
+              <th>Average<br>Match Length</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="solid">
+              <td>All</td>
+              <td>50.16%</td>
+              <td>30.78%</td>
+              <td>19.06%</td>
+              <td>3.69 sets</td>
+            </tr>
+            <tr>
+              <td class="indent">Australian Open</td>
+              <td>50.10%</td>
+              <td>30.18%</td>
+              <td>19.72%</td>
+              <td>3.70 sets</td>
+            </tr>
+            <tr>
+              <td class="indent">Roland Garros</td>
+              <td>51.09%</td>
+              <td>30.38%</td>
+              <td>18.53%</td>
+              <td>3.67 sets</td>
+            </tr>
+            <tr>
+              <td class="indent">Wimbledon</td>
+              <td>49.62%</td>
+              <td>30.67%</td>
+              <td>19.71%</td>
+              <td>3.70 sets</td>
+            </tr>
+            <tr>
+              <td class="indent">U.S. Open</td>
+              <td>49.85%</td>
+              <td>31.88%</td>
+              <td>18.27%</td>
+              <td>3.68 sets</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Wimbledon has the lowest percentage of three-set matches; Roland Garros has the highest.</p></li>
+            <li><p>The U.S. Open has the highest percentage of four-set matches and the lowest percentage of five-set matches.</p></li>
+            <li><p>If the conventional wisdom of the relative speed of court surfaces is to be believed, then the percentage of matches that go three sets correlates to the speed of the court surface.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <section>
+        <h3>How long does the average match last?</h3>
+
+        <div class="chart desktop" id="duration-of-match-venue"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-5.png" alt=""></div>
+
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Three Sets</th>
+              <th>Four Sets</th>
+              <th>Five Sets</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="solid">
+              <td>All</td>
+              <td>1h 54m</td>
+              <td>2h 43m</td>
+              <td>3h 30m</td>
+              <td>2h 28m</td>
+            </tr>
+            <tr>
+              <td class="indent">Australian Open</td>
+              <td>1h 54m</td>
+              <td>2h 45m</td>
+              <td>3h 31m</td>
+              <td>2h 29m</td>
+            </tr>
+            <tr>
+              <td class="indent">Roland Garros</td>
+              <td>1h 58m</td>
+              <td>2h 47m</td>
+              <td>3h 36m</td>
+              <td>2h 31m</td>
+            </tr>
+            <tr>
+              <td class="indent">Wimbledon</td>
+              <td>1h 49m</td>
+              <td>2h 35m</td>
+              <td>3h 24m</td>
+              <td>2h 22m</td>
+            </tr>
+            <tr>
+              <td class="indent">U.S. Open</td>
+              <td>1h 55m</td>
+              <td>2h 45m</td>
+              <td>3h 30m</td>
+              <td>2h 28m</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Despite the U.S. Open having a fifth-set tiebreak, its average fifth-set duration is <b>6 minutes</b> longer than Wimbledon's.</p></li>
+            <li><p>Wimbledon has the fewest matches that go three sets yet, on average, its matches are the quickest.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <section>
+        <h3>How Many Matches End in a Walkover or Retirement?</h3>
+
+        <div class="answer">The percentage of matches that end in a walkover or retirement is 4.43%</div>
+
+        <div class="chart desktop" id="walkover-major"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-6.png" alt=""></div>
+
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Walkovers/<br>Retirements</th>
+              <th>Total Matches<br>Scheduled</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="solid">
+              <td>All</td>
+              <td>383</td>
+              <td>8,636</td>
+              <td>4.43%</td>
+            </tr>
+            <tr>
+              <td class="indent">Australian Open</td>
+              <td>95</td>
+              <td>2,159</td>
+              <td>4.40%</td>
+            </tr>
+            <tr>
+              <td class="indent">Roland Garros</td>
+              <td>92</td>
+              <td>2,159</td>
+              <td>4.26%</td>
+            </tr>
+            <tr>
+              <td class="indent">Wimbledon</td>
+              <td>79</td>
+              <td>2,159</td>
+              <td>3.66%</td>
+            </tr>
+            <tr>
+              <td class="indent">U.S. Open</td>
+              <td>117</td>
+              <td>2,159</td>
+              <td>5.42%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+
+      <h2>Significant Trends</h2>
+
+      <p>The following charts analyze how the data has changed over time. A moving average of three-years is used in order to smooth out 
+      short-term fluctuations and highlight any longer-term trends.</p>
+
+      <section>
+        <h3>How many sets does the average match last?</h3>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-7.png" alt=""></div>
+
+        <div class="desktop">
+          <div class="chart" id="number-of-sets-trend"></div><br>
+          <div class="chart" id="number-of-sets-trend2"></div><br>
+        </div>
+
+        <br><br>
+
+        <h3>How long does the average match last?</h3>
+
+        <div class="desktop">
+          <div class="chart" id="duration-of-match-trend"></div><br>
+        </div>
+
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Three Sets</th>
+              <th>Four Sets</th>
+              <th>Five Sets</th>
+              <th>Average<br>Match Length</th>
+              <th>Average<br>Match Duration</th>
+              <!-- <th>Average<br>Set Duration</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2000</td>
+              <td>48.6%</td><td>34.3%</td><td>17.1%</td>
+              <td>3.68 sets</td>
+              <td><!-- 139.80 -->2h 20m</td>
+              <!-- <td>37.94m</td> -->
+            </tr>
+            <tr>
+              <td>2001</td>
+              <td>47.3%</td><td>31.4%</td><td>21.3%</td>
+              <td>3.74 sets</td>
+              <td><!-- 142.80 -->2h 23m</td>
+              <!-- <td>38.18m</td> -->
+            </tr>
+            <tr>
+              <td>2002</td>
+              <td>43.5%</td><td>34.6%</td><td>21.9%</td>
+              <td>3.78 sets</td>
+              <td><!-- 148.30 -->2h 28m</td>
+              <!-- <td>39.19m</td> -->
+            </tr>
+            <tr>
+              <td>2003</td>
+              <td>46.2%</td><td>34.8%</td><td>19.0%</td>
+              <td>3.73 sets</td>
+              <td><!-- 144.31 -->2h 24m</td>
+              <!-- <td>38.70m</td> -->
+            </tr>
+            <tr>
+              <td>2004</td>
+              <td>48.7%</td><td>31.8%</td><td>19.5%</td>
+              <td>3.71 sets</td>
+              <td><!-- 142.69 -->2h 23m</td>
+              <!-- <td>38.48m</td> -->
+            </tr>
+            <tr>
+              <td>2005</td>
+              <td>51.3%</td><td>30.1%</td><td>18.6%</td>
+              <td>3.67 sets</td>
+              <td><!-- 144.34 -->2h 24m</td>
+              <!-- <td>39.30m</td> -->
+            </tr>
+            <tr>
+              <td>2006</td>
+              <td>49.8%</td><td>30.0%</td><td>20.2%</td>
+              <td>3.70 sets</td>
+              <td><!-- 147.50 -->2h 28m</td>
+              <!-- <td>39.82m</td> -->
+            </tr>
+            <tr>
+              <td>2007</td>
+              <td>54.1%</td><td>28.5%</td><td>17.5%</td>
+              <td>3.63 sets</td>
+              <td><!-- 143.84 -->2h 24m</td>
+              <!-- <td>39.58m</td> -->
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>50.5%</td><td>31.8%</td><td>17.7%</td>
+              <td>3.67 sets</td>
+              <td><!-- 148.93 -->2h 29m</td>
+              <!-- <td>40.56m</td> -->
+            </tr>
+            <tr>
+              <td>2009</td>
+              <td>52.2%</td><td>29.0%</td><td>18.9%</td>
+              <td>3.67 sets</td>
+              <td><!-- 150.80 -->2h 31m</td>
+              <!-- <td>41.12m</td> -->
+            </tr>
+            <tr>
+              <td>2010</td>
+              <td>50.3%</td><td>29.0%</td><td>20.7%</td>
+              <td>3.70 sets</td>
+              <td><!-- 152.99 -->2h 33m</td>
+              <!-- <td>41.30m</td> -->
+            </tr>
+            <tr>
+              <td>2011</td>
+              <td>55.2%</td><td>29.8%</td><td>15.1%</td>
+              <td>3.60 sets</td>
+              <td><!-- 149.79 -->2h 30m</td>
+              <!-- <td>41.62m</td> -->
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>47.0%</td><td>31.3%</td><td>21.6%</td>
+              <td>3.75 sets</td>
+              <td><!-- 160.82 -->2h 41m</td>
+              <!-- <td>42.93m</td> -->
+            </tr>
+            <tr>
+              <td>2013</td>
+              <td>53.7%</td><td>26.6%</td><td>19.7%</td>
+              <td>3.66 sets</td>
+              <td><!-- 147.73 -->2h 28m</td>
+              <!-- <td>40.37m</td> -->
+            </tr>
+            <tr>
+              <td>2014</td>
+              <td>53.9%</td><td>29.3%</td><td>16.8%</td>
+              <td>3.63 sets</td>
+              <td><!-- 146.55 -->2h 27m</td>
+              <!-- <td>40.39m</td> -->
+            </tr>
+            <tr>
+              <td>2015</td>
+              <td>51.0%</td><td>29.3%</td><td>19.6%</td>
+              <td>3.69 sets</td>
+              <td><!-- 145.63 -->2h 26m</td>
+              <!-- <td>39.51m</td> -->
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td>49.6%</td><td>31.7%</td><td>18.7%</td>
+              <td>3.69 sets</td>
+              <td><!-- 149.42 -->2h 29m</td>
+              <!-- <td>40.48m</td> -->
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Over time, the percentage of three-set matches has increased while the percentage of four-set matches has decreased by almost the same amount.</p></li>
+            <li><p>Even though there has been a slight decline in the average number of sets played per match, the duration of matches has increased.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <h2>Acknowledgments</h2>
+
+      <p>Most of the raw data used for analysis was gathered from the glorious <a href="https://github.com/JeffSackmann/tennis_atp" class="newWindow">repository</a> 
+      of ATP match results compiled by Jeff Sackmann. Additional data from the <a href="http://www.atpworldtour.com/" class="newWindow">ATP Web site</a> filled in any gaps. A Microsoft Excel file 
+      is <a href="assets/excel/majors-scor.xlsx">available for download</a> if you wish to view the raw data that I compiled.</p>
+
+
+      <footer>
+        &copy; 2023 Adam Coti
+      </footer>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="chart-data-section">
+      
+      <table class="highchart number-of-sets" data-graph-container="#number-of-sets" data-graph-type="pie" data-graph-subtitle-text="2000-2016" data-graph-datalabels-enabled="1">
+        <caption>Breakdown by Number of Sets Played</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Three Sets</td>
+            <td data-graph-name="Three Sets (50.16%)">4140</td>
+          </tr>
+          <tr>
+            <td>Four Sets</td>
+            <td data-graph-name="Four Sets (30.78%)">2540</td>
+          </tr>
+          <tr>
+            <td>Five Sets</td>
+            <td data-graph-name="Five Sets (19.06%)">1573</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart length-of-match" data-graph-container="#length-of-match" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Minutes" data-graph-datalabels-enabled="1" data-graph-legend-disabled="1" data-graph-datalabels-formatter="chartMin">
+        <caption>Average Duration of Match by Number of Sets Played</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Minutes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Three Sets</td>
+            <td>114.17</td>
+          </tr>
+          <tr>
+            <td>Four Sets</td>
+            <td>162.89</td>
+          </tr>
+          <tr>
+            <td>Five Sets</td>
+            <td>209.94</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart length-of-match-venue" data-graph-container="#length-of-match-venue" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Percentage" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartPercent">
+        <caption>Breakdown by Number of Sets Played by Major</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Australian Open</th>
+            <th>Roland Garros</th>
+            <th>Wimbledon</th>
+            <th>U.S. Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Three Sets</td>
+            <td data-graph-name="50.10%">50.10</td>
+            <td data-graph-name="51.09%">51.09</td>
+            <td data-graph-name="49.62%">49.62</td>
+            <td data-graph-name="49.85%">49.85</td>
+          </tr>
+          <tr>
+            <td>Four Sets</td>
+            <td data-graph-name="30.18%">30.18</td>
+            <td data-graph-name="30.38%">30.38</td>
+            <td data-graph-name="30.67%">30.67</td>
+            <td data-graph-name="31.88%">31.88</td>
+          </tr>
+          <tr>
+            <td>Five Sets</td>
+            <td data-graph-name="19.72%">19.72</td>
+            <td data-graph-name="18.53%">18.53</td>
+            <td data-graph-name="19.71%">19.71</td>
+            <td data-graph-name="18.27%">18.27</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart duration-of-match-venue" data-graph-container="#duration-of-match-venue" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Minutes" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartMin">
+        <caption>Average Duration of Match by Major</caption>
+        <thead>
+          <tr>
+            <th>Major</th>
+            <th>Australian Open</th>
+            <th>Roland Garros</th>
+            <th>Wimbledon</th>
+            <th>U.S. Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Average Duration</td>
+            <td data-graph-name="148.55 minutes">148.55</td>
+            <td data-graph-name="151.14 minutes">151.14</td>
+            <td data-graph-name="141.81 minutes">141.81</td>
+            <td data-graph-name="148.22 minutes">148.22</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart walkover-major" data-graph-container="#walkover-major" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Percentage" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartPercent">
+        <caption>Percentage of Walkovers/Retirements by Major</caption>
+        <thead>
+          <tr>
+            <th>Walkovers/Retirements</th>
+            <th>Australian Open</th>
+            <th>Roland Garros</th>
+            <th>Wimbledon</th>
+            <th>U.S. Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Major</td>
+            <td>4.40%</td>
+            <td>4.26%</td>
+            <td>3.66%</td>
+            <td>5.42%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart number-of-sets-trend" data-graph-container="#number-of-sets-trend" data-graph-type="line" data-graph-subtitle-text="Three-Year Moving Average from 2000-2016" data-graph-yaxis-1-title-text="Percentage" data-graph-datalabels-enabled="0" data-graph-datalabels-formatter="chartPercent">
+        <caption>Breakdown by Number of Sets Played</caption>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Three Sets</th>
+            <th>Four Sets</th>
+            <th>Five Sets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2002</td>
+            <td>46.5%</td> <td>33.4%</td> <td>20.1%</td>
+          </tr>
+          <tr>
+            <td>2003</td>
+            <td>45.7%</td> <td>33.6% <td>20.8%</td>
+          </tr>
+          <tr>
+            <td>2004</td>
+            <td>46.1%</td> <td>33.7% <td>20.2%</td>
+          </tr>
+          <tr>
+            <td>2005</td>
+            <td>48.7%</td> <td>32.2%</td> <td>19.1%</td>
+          </tr>
+          <tr>
+            <td>2006</td>
+            <td>49.9%</td> <td>30.6%</td> <td>19.4%</td>
+          </tr>
+          <tr>
+            <td>2007</td>
+            <td>51.7%</td> <td>29.5%</td> <td>18.8%</td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>51.5%</td> <td>30.1%</td> <td>18.4%</td>
+          </tr>
+          <tr>
+            <td>2009</td>
+            <td>52.2%</td> <td>29.8%</td> <td>18.0%</td>
+          </tr>
+          <tr>
+            <td>2010</td>
+            <td>51.0%</td> <td>29.9%</td> <td>19.1%</td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td>52.5%</td> <td>29.2%</td> <td>18.2%</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>50.8%</td> <td>30.0%</td> <td>19.1%</td>
+          </tr>
+          <tr>
+            <td>2013</td>
+            <td>52.0%</td> <td>29.2%</td> <td>18.8%</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>51.6%</td> <td>29.0%</td> <td>19.4%</td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td>52.9%</td> <td>28.4%</td> <td>18.7%</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>51.5%</td> <td>30.1%</td> <td>18.4%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart number-of-sets-trend2" data-graph-container="#number-of-sets-trend2" data-graph-type="line" data-graph-subtitle-text="Three-Year Moving Average from 2000-2016" data-graph-yaxis-1-title-text="Sets" data-graph-datalabels-enabled="0" data-graph-legend-disabled="1" data-graph-datalabels-formatter="chartPercent" data-graph-yaxis-1-min="3" data-graph-yaxis-1-max="4">
+        <caption>Average Number of Sets Played per Match</caption>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Average Number of Sets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2002</td>  <td>3.74</td>
+          </tr>
+          <tr>
+            <td>2003</td>  <td>3.75</td>
+          </tr>
+          <tr>
+            <td>2004</td>  <td>3.74</td>
+          </tr>
+          <tr>
+            <td>2005</td>  <td>3.70</td>
+          </tr>
+          <tr>
+            <td>2006</td>  <td>3.70</td>
+          </tr>
+          <tr>
+            <td>2007</td>  <td>3.67</td>
+          </tr>
+          <tr>
+            <td>2008</td>  <td>3.67</td>
+          </tr>
+          <tr>
+            <td>2009</td>  <td>3.66</td>
+          </tr>
+          <tr>
+            <td>2010</td>  <td>3.68</td>
+          </tr>
+          <tr>
+            <td>2011</td>  <td>3.66</td>
+          </tr>
+          <tr>
+            <td>2012</td>  <td>3.68</td>
+          </tr>
+          <tr>
+            <td>2013</td>  <td>3.67</td>
+          </tr>
+          <tr>
+            <td>2014</td>  <td>3.68</td>
+          </tr>
+          <tr>
+            <td>2015</td>  <td>3.66</td>
+          </tr>
+          <tr>
+            <td>2016</td>  <td>3.67</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="highchart duration-of-match-trend" data-graph-container="#duration-of-match-trend" data-graph-type="line" data-graph-subtitle-text="Three-Year Moving Average from 2000-2016" data-graph-yaxis-1-title-text="Minutes" data-graph-legend-disabled="1" data-graph-datalabels-enabled="0" data-graph-datalabels-formatter="chartMin" data-graph-yaxis-1-min="100" data-graph-yaxis-1-max="200">
+        <caption>Average Duration of Match</caption>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Average Duration of Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2002</td><td>143.64</td>
+          </tr>
+          <tr>
+            <td>2003</td><td>145.14</td>
+          </tr>
+          <tr>
+            <td>2004</td><td>145.10</td>
+          </tr>
+          <tr>
+            <td>2005</td><td>143.78</td>
+          </tr>
+          <tr>
+            <td>2006</td><td>144.85</td>
+          </tr>
+          <tr>
+            <td>2007</td><td>145.23</td>
+          </tr>
+          <tr>
+            <td>2008</td><td>146.76</td>
+          </tr>
+          <tr>
+            <td>2009</td><td>147.86</td>
+          </tr>
+          <tr>
+            <td>2010</td><td>150.91</td>
+          </tr>
+          <tr>
+            <td>2011</td><td>151.19</td>
+          </tr>
+          <tr>
+            <td>2012</td><td>154.53</td>
+          </tr>
+          <tr>
+            <td>2013</td><td>152.78</td>
+          </tr>
+          <tr>
+            <td>2014</td><td>151.70</td>
+          </tr>
+          <tr>
+            <td>2015</td><td>146.64</td>
+          </tr>
+          <tr>
+            <td>2016</td><td>147.20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+
+</body>
+</html>

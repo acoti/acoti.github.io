@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Measuring the Competitiveness of Matches at Tennis Majors - Purefreedom Tennis</title>
+  <meta name="description" content="A deeper look at the ebbs and flows of matches at tennis majors.">
+  <meta property="og:title" content="Measuring the Competitiveness of Matches at Tennis Majors - Purefreedom Tennis">
+  <meta property="og:description" content="A deeper look at the ebbs and flows of matches at tennis majors.">
+  <meta property="og:site_name" content="Purefreedom Tennis">
+
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+  <script src="assets/js/highcharts.js"></script>
+  <script src="assets/js/jquery.highchartTable.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/code.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i,700" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="content-container">
+
+    <main>
+      <h1>Measuring the Competitiveness at Tennis Majors from 2000-2016</h1>
+
+      <div class="author">By Adam Coti<br><a href="http://www.purefreedom.com" class="newWindow">www.purefreedom.com</a></div>
+
+      <div class="back-to-home"><a href="../index.htm">Back to Home Page</a></div>
+
+      <h2>Introduction</h2>
+
+      <p>After I published my previous <a href="../majors-scor/">analysis of scorelines at tennis majors</a>, many asked for a 
+      more detailed examination. Ben Rothenberg of <i>The New York Times</i>, the inspiration for that analysis, tweeted: 
+      <q>...curious also about how often fourth or fifth sets are uncompetitive because one guy is gassed/dispirited, compared to BO3.</q></p>
+
+      <p>In response, I've taken a deeper look at the ebbs and flows of these matches. Do matches vary in
+      competitiveness on a consistent basis? Is there evidence that the later sets of a match are more dominated
+      by the eventual winner? Also, as a match progresses, is there any way to predict who has the advantage in winning the
+      match? What follows may help in answering these questions and more.</p>
+
+      <p>The following analysis is based on all completed matches at majors from 2000-2016 less retirements and walkovers. This
+      includes 8,253 matches that are comprised of 30,445 sets and 298,027 games. Please note that all majors, except for the
+      U.S. Open, do not use tiebreaks in the final set. This will slightly inflate the fifth-set averages concerning games where 
+      applicable.</p>
+
+
+      <section class="first">
+
+        <h2>Global Averages</h2>
+        
+        <div class="chart desktop" id="global-averages"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-1.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Three Sets</th>
+              <th>Four Sets</th>
+              <th>Five Sets</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Average Games Per Match</td>
+              <td>28.56</td>
+              <td>39.53</td>
+              <td>50.46</td>
+              <td>36.11</td>
+            </tr>
+            <tr>
+              <td class="indent">Average Won By Winner</td>
+              <td>18.66</td>
+              <td>22.74</td>
+              <td>26.80</td>
+              <td>21.47</td>
+            </tr>
+            <tr class="solid">
+              <td class="indent">Average Won by Loser</td>
+              <td>9.90</td>
+              <td>16.79</td>
+              <td>23.66</td>
+              <td>14.64</td>
+            </tr>
+            <tr>
+              <td>Average Games Per Set</td>
+              <td>9.52</td>
+              <td>9.88</td>
+              <td>10.09</td>
+              <td>9.79</td>
+            </tr>
+            <tr>
+              <td class="indent">Average Set Score</td>
+              <td>6.22–3.30</td>
+              <td>6.28–3.60</td>
+              <td>6.37–3.72</td>
+              <td>6.28–3.51</td>
+            </tr>
+            <tr>
+              <td class="indent">Score Differential</td>
+              <td>2.92</td>
+              <td>2.68</td>
+              <td>2.65</td>
+              <td>2.77</td>
+            </tr>    
+           </tbody>
+        </table>
+        
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The Average Set Score does not differentiate between who ultimately won or lost the match; it is a measure of the overall 
+            competitiveness of an average set.</p></li>
+
+            <li><p>Using the Score Differential as the criterion, there is a greater disparity in competitiveness between three-set and 
+            four-set matches than there is between four-set and five-set matches.</p></li>
+          </ul>
+        </div>
+
+      </section>
+
+
+
+
+      <section>
+
+        <h2>Three-Set Matches</h2>
+        
+        <div class="chart desktop" id="three-set-averages"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-2.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+              <th>Set 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Average Set Score</td>
+              <td>6.25–3.40</td>
+              <td>6.22–3.36</td>
+              <td>6.19–3.14</td>
+            </tr>
+            <tr>
+              <td>Score Differential</td>
+              <td>2.85</td>
+              <td>2.86</td>
+              <td>3.05</td>
+            </tr>
+            <tr>
+              <td>Chance of Tiebreak</td>
+              <td>16.3%</td>
+              <td>13.5%</td>
+              <td>11.2%</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The first two sets are roughly equal in competitiveness. The third set, though, is more dominated by the winner of the match. 
+            This can be inferred by the jump in Score Differential in the third set and the continued decrease in tiebreaks.</p></li>
+          </ul>
+        </div>
+
+      </section>
+
+
+
+
+      <section>
+
+        <h2>Four-Set Matches</h2>
+        
+        <div class="chart desktop" id="four-set-averages"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-3.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+              <th>Set 3</th>
+              <th>Set 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Average Set Score</td>
+              <td>6.31–3.78</td>
+              <td>6.29–3.68</td>
+              <td>6.27–3.59</td>
+              <td>6.23–3.37</td>
+            </tr>
+            <tr>
+              <td>Score Differential</td>
+              <td>2.53</td>
+              <td>2.61</td>
+              <td>2.68</td>
+              <td>2.86</td>
+            </tr>
+            <tr>
+              <td>Chance of Tiebreak</td>
+              <td>22.0%</td>
+              <td>19.8%</td>
+              <td>19.0%</td>
+              <td>15.2%</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="remarks internal">
+          <p>Note:</p>
+          <ul>
+            <li><p>The Average Set Score does not differentiate between who ultimately won or lost the match; it is a measure of the overall 
+            competitiveness of an average set.</p></li>
+
+            <li><p>There is a gradual decrease in competitiveness until the fourth set, which shows a greater increase in Score Differential  
+            and a greater decrease in tiebreaks as compared to the other sets.</p></li>
+          </ul>
+        </div>
+
+        <h3>Average Set Score for All Possible Four-Set Scorelines</h3>
+
+        <div class="chart-sub mobile"><img src="assets/images/table-1.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+              <th>Set 3</th>
+              <th>Set 4</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WWLW</td>
+              <td>6.27–3.60</td>
+              <td>6.26–3.60</td>
+              <td>3.98–6.36</td>
+              <td>6.25–3.39</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>WLWW</td>
+              <td>6.27–3.58</td>
+              <td>3.87–6.31</td>
+              <td>6.26–3.44</td>
+              <td>6.23–3.38</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>LWWW</td>
+              <td>4.09–6.38</td>
+              <td>6.29–3.59</td>
+              <td>6.22–3.41</td>
+              <td>6.22–3.34</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="6"></td>
+            </tr>
+            <tr>
+              <td>WWLW</td>
+              <td>2.67</td>
+              <td>2.66</td>
+              <td>(2.38)</td>
+              <td>2.86</td>
+              <td>5.81</td>
+            </tr>
+            <tr>
+              <td>WLWW</td>
+              <td>2.69</td>
+              <td>(2.44)</td>
+              <td>2.82</td>
+              <td>2.85</td>
+              <td>5.92</td>
+            </tr>
+            <tr>
+              <td>LWWW</td>
+              <td>(2.29)</td>
+              <td>2.70</td>
+              <td>2.81</td>
+              <td>2.88</td>
+              <td>6.10</td>
+            </tr>
+          </tbody>
+        </table>
+ 
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>In each scoreline scenario, the winner of the match won each of his three sets more decisively than the only set won by the 
+            loser of the match.</p></li>
+
+            <li><p>The scenario most dominated by the winner of the match is the one where he loses the first set and goes on to win the next 
+            three. This is confirmed by the total Score Differential of 6.10 being the highest of all scenarios. As learned in the 
+            <a href="../majors-scor/">Analysis of Scorelines</a>, this is also the most common of the four-set scenarios.</p></li>
+          </ul>
+        </div>
+
+      </section>
+
+
+
+
+      <section>
+
+        <h2>Five-Set Matches</h2>
+        
+        <div class="chart desktop" id="five-set-averages"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-4.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+              <th>Set 3</th>
+              <th>Set 4</th>
+              <th>Set 5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Average Set Score</td>
+              <td>6.28–3.78</td>
+              <td>6.28–3.70</td>
+              <td>6.29–3.69</td>
+              <td>6.29–3.62</td>
+              <td>6.71–3.82</td>
+            </tr>
+            <tr>
+              <td>Score Differential</td>
+              <td>2.50</td>
+              <td>2.58</td>
+              <td>2.60</td>
+              <td>2.67</td>
+              <td>2.89</td>
+            </tr>
+            <tr>
+              <td>Chance of Tiebreak*</td>
+              <td>19.1%</td>
+              <td>19.0%</td>
+              <td>20.0%</td>
+              <td>19.6%</td>
+              <td>17.3%</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="remarks internal">
+          <p class="footnote">*Matches in majors, except for the U.S. Open, do not have tiebreaks in the fifth set. For purposes of this 
+          analysis only, a fifth set that extends past 6-6 is classified as a <q>tiebreak</q>.</p>
+
+          <p>Note:</p>
+          <ul>
+            <li><p>The Average Set Score does not differentiate between who ultimately won or lost the match; it is a measure of the overall 
+            competitiveness of an average set.</p></li>
+
+            <li><p>As with three-set and four-set matches, there is a decrease in competitiveness as the match progresses. This is shown in the 
+            gradual increasing of the Score Differential. There is no clear pattern, however, regarding the odds of a tiebreak in each set.</p></li>
+          </ul>
+        </div>
+
+        <h3>Average Set Score for All Possible Five-Set Scorelines</h3>
+
+        <div class="chart-sub mobile"><img src="assets/images/table-2.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+              <th>Set 3</th>
+              <th>Set 4</th>
+              <th>Set 5</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WWLLW</td>
+              <td>6.27–3.70</td>
+              <td>6.28–3.65</td>
+              <td>3.82–6.33</td>
+              <td>3.52–6.25</td>
+              <td>6.75–3.87</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>WLWLW</td>
+              <td>6.30–3.84</td>
+              <td>3.81–6.32</td>
+              <td>6.24–3.49</td>
+              <td>3.95–6.36</td>
+              <td>6.69–3.90</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>LWWLW</td>
+              <td>3.75–6.26</td>
+              <td>6.28–3.76</td>
+              <td>6.26–3.54</td>
+              <td>3.89–6.35</td>
+              <td>6.77–4.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>WLLWW</td>
+              <td>6.23–3.63</td>
+              <td>3.69–6.28</td>
+              <td>3.82–6.34</td>
+              <td>6.27–3.53</td>
+              <td>6.80–3.88</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>LWLWW</td>
+              <td>4.02–6.36</td>
+              <td>6.29–3.63</td>
+              <td>3.63–6.28</td>
+              <td>6.26–3.40</td>
+              <td>6.74–3.84</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>LLWWW</td>
+              <td>3.79–6.28</td>
+              <td>3.68–6.26</td>
+              <td>6.28–3.74</td>
+              <td>6.28–3.53</td>
+              <td>6.56–3.54</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="6"></td>
+            </tr>
+            <tr>
+              <td>WWLLW</td>
+              <td>2.57</td>
+              <td>2.63</td>
+              <td>(2.51)</td>
+              <td>(2.73)</td>
+              <td>2.89</td>
+              <td>2.85</td>
+            </tr>
+            <tr>
+              <td>WLWLW</td>
+              <td>2.46</td>
+              <td>(2.51)</td>
+              <td>2.76</td>
+              <td>(2.40)</td>
+              <td>2.79</td>
+              <td>3.10</td>
+            </tr>
+            <tr>
+              <td>LWWLW</td>
+              <td>(2.51)</td>
+              <td>2.53</td>
+              <td>2.72</td>
+              <td>(2.45)</td>
+              <td>2.76</td>
+              <td>3.05</td>
+            </tr>
+            <tr>
+              <td>WLLWW</td>
+              <td>2.60</td>
+              <td>(2.59)</td>
+              <td>(2.51)</td>
+              <td>2.73</td>
+              <td>2.93</td>
+              <td>3.16</td>
+            </tr>
+            <tr>
+              <td>LWLWW</td>
+              <td>(2.35)</td>
+              <td>2.65</td>
+              <td>(2.65)</td>
+              <td>2.87</td>
+              <td>2.90</td>
+              <td>3.43</td>
+            </tr>
+            <tr>
+              <td>LLWWW</td>
+              <td>(2.49)</td>
+              <td>(2.58)</td>
+              <td>2.54</td>
+              <td>2.75</td>
+              <td>3.02</td>
+              <td>3.24</td>
+            </tr>
+          </tbody>
+        </table>
+ 
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The winner of the match won his sets more decisively as the match progressed with the fifth set being his best.</p></li>
+            
+            <li><p>There are three scenarios where the winner of the match wins the final two sets; these are the most dominant victories 
+            and whose fifth sets are the most decisive.</p></li>
+          </ul>
+        </div>
+
+      </section>
+
+
+
+
+      <section>
+
+        <h2>Predictive Indicators</h2>
+
+        <p>When the match is tied at two sets apiece, does a player's performance in the first four sets provide any indication of who will 
+        win the fifth set? That is, if one of the players has won more games than his opponent as the fifth set begins, does he have an historical
+        edge in winning the match?</p>
+
+        <div class="chart desktop" id="four-set-games"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-5.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th>Game Differential</th>
+              <th>+1</th>
+              <th>+2</th>
+              <th>+3</th>
+              <th>+4</th>
+              <th>+5</th>
+              <th>+6</th>
+              <th>+7</th>
+              <th>+8</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Percent Chance of Winning Match</td>
+              <td>53%</td>
+              <td>54%</td>
+              <td>52%</td>
+              <td>61%</td>
+              <td>55%</td>
+              <td>63%</td>
+              <td>85%</td>
+              <td>75%</td>
+              <td>55%</td>
+            </tr>
+            <tr>
+              <td>Sample Size</td>
+              <td>481</td>
+              <td>358</td>
+              <td>231</td>
+              <td>161</td>
+              <td>71</td>
+              <td>16</td>
+              <td>13</td>
+              <td>4</td>
+              <td>1,335</td>
+            </tr>
+          </tbody>
+        </table>
+ 
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>If a player has won more games than his opponent after four sets, he goes on to win 55% of the matches; specific percentages 
+            per how many games ahead are indicated above. For example: If the scoreline after four sets is 6-2,4-6,6-1,3-6, one player leads 
+            in games 19-15. Historically, that player goes on to win the match 61% of the time.</p></li>
+
+            <li><p>In 15.1% of five-set matches, both players have won the same number of games after four sets thus offering no predictive information.</p></li>
+
+            <li><p>It is possible to be ahead by nine or ten games after four sets, but that has never happened in the years analyzed.</p></li>
+          </ul>
+        </div>
+
+        <br><br><br>
+
+        <p>What about when the match is tied at one-set apiece? With a sample size of only two sets, is there any indication of who will win that match 
+        based on how many games each player has won?</p>
+
+        <div class="chart desktop" id="two-set-games"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-6.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>+1</th>
+              <th>+2</th>
+              <th>+3</th>
+              <th>+4</th>
+              <th>+5</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Percent Chance of Winning Match</td>
+              <td>54%</td>
+              <td>61%</td>
+              <td>60%</td>
+              <td>62%</td>
+              <td>76%</td>
+              <td>58%</td>
+            </tr>
+            <tr>
+              <td>Sample Size</td>
+              <td>1,067</td>
+              <td>639</td>
+              <td>257</td>
+              <td>106</td>
+              <td>17</td>
+              <td>2,086</td>
+            </tr>
+          </tbody>
+        </table>
+ 
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>If a player has won more games than his opponent after two sets, he goes on to win 58% of the matches; specific percentages 
+            per how many games ahead are indicated above.</p></li>
+
+            <li><p>In 24.6% of the matches tied at one set apiece, both players had won the same amount of games thus offering no predictive information.</p></li>
+
+            <li><p>Despite the smaller sample size, this is actually a more accurate indicator of the eventual winner of the match than the 
+            player who has won more games after four sets.</p></li>
+          </ul>
+        </div>
+
+      </section>
+
+
+
+
+
+      <section>
+
+        <h2>Tiebreak Distribution</h2>
+
+        <div class="chart desktop" id="tiebreaks"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-7.png" alt=""></div>
+        
+        <table class="data desktop">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th>Score</th>
+              <th>7–0</th>
+              <th>7–1</th>
+              <th>7–2</th>
+              <th>7–3</th>
+              <th>7–4</th>
+              <th>7–5</th>
+              <th>8–6</th>
+              <th>9–7</th>
+              <th>10–8</th>
+              <th>11–9</th>
+              <th>12–10</th>
+              <th>&gt;12–10</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Percent</td>
+              <td>2%</td>
+              <td>6%</td>
+              <td>10%</td>
+              <td>16%</td>
+              <td>21%</td>
+              <td>23%</td>
+              <td>10%</td>
+              <td>5%</td>
+              <td>3%</td>
+              <td>2%</td>
+              <td>1%</td>
+              <td>1%</td>
+            </tr>
+            <tr>
+              <td>Sample Size</td>
+              <td>82</td>
+              <td>285</td>
+              <td>498</td>
+              <td>799</td>
+              <td>1,049</td>
+              <td>1,121</td>
+              <td>497</td>
+              <td>262</td>
+              <td>157</td>
+              <td>82</td>
+              <td>36</td>
+              <td>47</td>
+            </tr>
+          </tbody>
+        </table>
+ 
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Out of a total of 4,915 tiebreaks, the average score was 7.48–4.32.</p></li>
+        </div>
+
+      </section>
+
+
+
+      <h2>Acknowledgments</h2>
+
+      <p>Most of the raw data used for analysis was gathered from the glorious <a href="https://github.com/JeffSackmann/tennis_atp" class="newWindow">repository</a> 
+      of ATP match results compiled by Jeff Sackmann. Additional data from the <a href="http://www.atpworldtour.com/" class="newWindow">ATP Web site</a> filled in any gaps. A Microsoft Excel file 
+      is <a href="assets/excel/majors-comp.xlsx">available for download</a> if you wish to view the raw data that I compiled.</p>
+
+
+      <footer>
+        &copy; 2023 Adam Coti
+      </footer>
+
+    </main>
+
+
+
+
+
+    
+    <div class="chart-data-section">
+
+
+      <table class="highchart global-averages" data-graph-container="#global-averages" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Games" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartTwoDecimal" >
+        <caption>Average Set Score by Number of Sets Played</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Winner of Set</th>
+            <th>Loser of Set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Three-Set Matches</td>
+            <td data-graph-name="6.22">6.22</td>
+            <td data-graph-name="3.30">3.30</td>
+          </tr>
+          <tr>
+            <td>Four-Set Matches</td>
+            <td data-graph-name="6.22">6.28</td>
+            <td data-graph-name="3.30">3.60</td>
+          </tr>
+          <tr>
+            <td>Five-Set Matches</td>
+            <td data-graph-name="6.37">6.37</td>
+            <td data-graph-name="3.72">3.72</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart three-set-averages" data-graph-container="#three-set-averages" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Games" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartTwoDecimal" >
+        <caption>Average Set Score for Three-Set Matches</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Winner of Set</th>
+            <th>Loser of Set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Set 1</td>
+            <td data-graph-name="6.25">6.25</td>
+            <td data-graph-name="3.40">3.40</td>
+          </tr>
+          <tr>
+            <td>Set 2</td>
+            <td data-graph-name="6.22">6.22</td>
+            <td data-graph-name="3.36">3.36</td>
+          </tr>
+          <tr>
+            <td>Set 3</td>
+            <td data-graph-name="6.19">6.19</td>
+            <td data-graph-name="3.14">3.14</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart four-set-averages" data-graph-container="#four-set-averages" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Games" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartTwoDecimal" >
+        <caption>Average Set Score for Four-Set Matches</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Winner of Set</th>
+            <th>Loser of Set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Set 1</td>
+            <td data-graph-name="6.31">6.31</td>
+            <td data-graph-name="3.78">3.78</td>
+          </tr>
+          <tr>
+            <td>Set 2</td>
+            <td data-graph-name="6.29">6.29</td>
+            <td data-graph-name="3.68">3.68</td>
+          </tr>
+          <tr>
+            <td>Set 3</td>
+            <td data-graph-name="6.27">6.27</td>
+            <td data-graph-name="3.59">3.59</td>
+          </tr>
+          <tr>
+            <td>Set 4</td>
+            <td data-graph-name="6.23">6.23</td>
+            <td data-graph-name="3.37">3.37</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart five-set-averages" data-graph-container="#five-set-averages" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Games" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartTwoDecimal" >
+        <caption>Average Set Score for Five-Set Matches</caption>
+        <thead>
+          <tr>
+            <th>Sets</th>
+            <th>Winner of Set</th>
+            <th>Loser of Set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Set 1</td>
+            <td data-graph-name="6.28">6.28</td>
+            <td data-graph-name="3.78">3.78</td>
+          </tr>
+          <tr>
+            <td>Set 2</td>
+            <td data-graph-name="6.28">6.28</td>
+            <td data-graph-name="3.70">3.70</td>
+          </tr>
+          <tr>
+            <td>Set 3</td>
+            <td data-graph-name="6.29">6.29</td>
+            <td data-graph-name="3.69">3.69</td>
+          </tr>
+          <tr>
+            <td>Set 4</td>
+            <td data-graph-name="6.29">6.29</td>
+            <td data-graph-name="3.62">3.62</td>
+          </tr>
+          <tr>
+            <td>Set 5</td>
+            <td data-graph-name="6.71">6.71</td>
+            <td data-graph-name="3.82">3.82</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart two-set-games" data-graph-container="#two-set-games" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Percent" data-graph-xaxis-title-text="Number of Games Ahead" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartPercent" data-graph-yaxis-1-max="100">
+        <caption>Chance of Winning Match after Two Sets by Games Differential</caption>
+        <thead>
+          <tr>
+            <th>Games Ahead</th>
+            <th>Chance of Winning Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>+1</td>
+            <td>54%</td>
+          </tr>
+          <tr>
+            <td>+2</td>
+            <td>61%</td>
+          </tr>
+          <tr>
+            <td>+3</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>+4</td>
+            <td>62%</td>
+          </tr>
+          <tr>
+            <td>+5</td>
+            <td>76%</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart four-set-games" data-graph-container="#four-set-games" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Percent" data-graph-xaxis-title-text="Number of Games Ahead" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartPercent" data-graph-yaxis-1-max="100">
+        <caption>Chance of Winning Match after Four Sets by Games Differential</caption>
+        <thead>
+          <tr>
+            <th>Games Ahead</th>
+            <th>Chance of Winning Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>+1</td>
+            <td>53%</td>
+          </tr>
+          <tr>
+            <td>+2</td>
+            <td>54%</td>
+          </tr>
+          <tr>
+            <td>+3</td>
+            <td>52%</td>
+          </tr>
+          <tr>
+            <td>+4</td>
+            <td>61%</td>
+          </tr>
+          <tr>
+            <td>+5</td>
+            <td>55%</td>
+          </tr>
+          <tr>
+            <td>+6</td>
+            <td>63%</td>
+          </tr>
+          <tr>
+            <td>+7</td>
+            <td>85%</td>
+          </tr>
+          <tr>
+            <td>+8</td>
+            <td>75%</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart tiebreaks" data-graph-container="#tiebreaks" data-graph-type="column" data-graph-subtitle-text="2000-2016" data-graph-yaxis-1-title-text="Percent" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartPercent" data-graph-yaxis-1-max="30">
+        <caption>Distribution of Tiebreaks</caption>
+        <thead>
+          <tr>
+            <th>Score</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7-0</td>
+            <td>2%</td>
+          </tr>
+          <tr>
+            <td>7-1</td>
+            <td>6%</td>
+          </tr>
+          <tr>
+            <td>7-2</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>7-3</td>
+            <td>16%</td>
+          </tr>
+          <tr>
+            <td>7-4</td>
+            <td>21%</td>
+          </tr>
+          <tr>
+            <td>7-5</td>
+            <td>23%</td>
+          </tr>
+          <tr>
+            <td>8-6</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>9-7</td>
+            <td>5%</td>
+          </tr>
+          <tr>
+            <td>10-8</td>
+            <td>3%</td>
+          </tr>
+          <tr>
+            <td>11-9</td>
+            <td>2%</td>
+          </tr>
+          <tr>
+            <td>12-10</td>
+            <td>1%</td>
+          </tr>
+          <tr>
+            <td>&gt;12-10</td>
+            <td>1%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+    </div>
+
+  
+
+
+  </div>
+
+</body>
+</html>

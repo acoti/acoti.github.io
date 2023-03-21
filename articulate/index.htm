@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Articulate.js - Let the Browser Speak to You</title>
+  <meta name="description" content="A jQuery plugin by Adam Coti that lets the browser read aloud page content.">
+  <meta property="og:title" content="Articulate.js - Let the Browser Speak to You">
+  <meta property="og:description" content="A jQuery plugin by Adam Coti that lets the browser read aloud page content.">
+  <meta property="og:site_name" content="Articulate.js">
+
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+  <script src="assets/js/code.js"></script>
+  <script src="assets/js/articulate.min.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i,800i" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="home">
+
+  <header>
+    <h1>Articulate.js</h1>
+    <h2>Let the Browser Speak to You</h2>
+  </header>
+  
+  <div class="page-container group">
+
+    <nav>
+      <ul>
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="demos.htm">Demos</a></li>
+        <li><a href="guide.htm">Guide</a></li>
+        <li><a href="https://github.com/acoti/articulate.js" rel="newWindow">Download</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="intro">
+        <h3>Introduction</h3>
+      
+        <p>Many Web sites, particularly those that feature articles or blog posts, employ specially crafted print style sheets. 
+        That way, a user can print out the relevant content without wasting paper on navigation, ads, or anything else not germane 
+        to the overall subject matter of the Web page.</p>
+        
+        <p>Articulate.js, a jQuery <span data-articulate-swap="plug in">plugin</span>, is what I consider the narrative equivalent &mdash; 
+        with as little as one line of code, it enables developers to create links that allow users to click, sit back, and listen to 
+        the browser read aloud the important content of a Web page. In some ways, it can turn a thoughtful essay or article into a mini 
+        podcast. And because it uses built-in JavaScript functionality, no browser extensions or other system software is needed.</p>
+
+        <!-- <articulate> Thank you, and have a nice day. </articulate> -->
+      </div>
+
+      <p>Give it a try and use the following buttons to voice the above &mdash; with a little extra at the end:</p>
+      
+      <p>
+        <button onclick="jQuery('div.intro').articulate('speak');">Speak this Section</button>
+        <button onclick="jQuery().articulate('stop');">Stop</button>
+      </p>
+
+      <p class="mobile">Visit the desktop version of this Web site for demos and a developer's guide.</p>
+
+
+
+
+      <div class="how">
+        <h3>How Does It Work?</h3>
+        
+        <p>Articulate.js uses the Speech Synthesis interface of the Web Speech API, which is 
+        now part of JavaScript in most major browsers, including the latest versions of Edge, Safari, Chrome, Opera, Firefox, 
+        <span data-articulate-spell>iOS</span> Safari, and Chrome for Android. <span data-articulate-ignore>Here are the current 
+        usage stats from <a href="http://caniuse.com/#feat=speech-synthesis" rel="newWindow">caniuse.com</a>.</span></p>
+
+        <p>The lightweight Articulate.js <span data-articulate-swap="plug in">plugin</span> (about 6K) allows you to leverage the 
+        powerful selector options of jQuery to specify which parts of the Web page that you want spoken. 
+        <span class="desktop" data-articulate-ignore>For example, depending on how the Web page is organized, a single line of code, 
+        like the following, can direct the browser to speak the entire contents of an article or blog post:</span></p>
+
+        <p class="code desktop" data-articulate-ignore><code>$('article').articulate('speak')</code></p>
+
+        <p class="desktop" data-articulate-ignore>Or how about only the primary headers and paragraphs:</p>
+        
+        <p class="code desktop" data-articulate-ignore><code>$('h1,h2,p').articulate('speak')</code></p>
+
+        <p>Internally, Articulate.js clones the matched set of elements and all their descendant elements and text nodes. It then 
+        parses this clone using a default set of rules, deciding what should be spoken and ignored, then adding the appropriate 
+        pauses to make everything sound more like a narrative.</p>
+
+        <p>And it's completely configurable. With Articulate.js, you can, among other things:</p>
+
+        <ul class="bullets">
+          <li>Create links allowing the user to pause, resume, and stop speaking.</li>
+          <li>Change the rate and pitch of the speaking voice.</li>
+          <li>Specify HTML tags to be spoken that would otherwise be ignored, and vice versa.</li>
+          <li>Perform a search and replace within the text, which is helpful for abbreviations. <span data-articulate-ignore>For example, you can specify that all instances of <q>i.e.</q> to be spoken as <q>that is</q>.</span></li>
+          <li>Specify blocks of text to be ignored. For example, a sentence that reads <q>click here for more information</q> does not need to be spoken.</li>
+          <li>Specify words to be spelled out.</li>
+          <li>Specify copy in specially crafted comment tags to be spoken that is otherwise hidden on the screen.</li>
+        </ul>
+      </div>
+
+      <p>
+        <button onclick="jQuery('div.how').articulate('speak');">Speak this Section</button>
+        <button onclick="jQuery().articulate('stop');">Stop</button>
+      </p>
+
+
+      <div class="notes">
+        <h3>General Notes</h3>
+        
+        <p>You will notice that the Speech Synthesis interface is subtly different across browsers and operating systems. For example, 
+        the default rate of speech will sound somewhat faster on an iPhone as opposed to its desktop implementations. Developers can 
+        provide input sliders or radio buttons for users to fine-tune their experience.</p>
+        
+        <p>In addition, depending on the operating system and device, browsers expose different voices to the Speech Synthesis interface, 
+        and these voices can be selected to override the default <q>native</q> voice. The latest release now includes methods that allow
+        the developer to create dropdown menus automatically that allow the user to choose a different voice.</p>
+        
+        <p>Also, only one voice can be heard at a time &mdash; no multitracking like in a music studio. This is a limitation of the Web Speech API 
+        rather than Articulate.js.</p>
+      </div>
+
+      <p>
+        <button onclick="jQuery('div.notes').articulate('speak');">Speak this Section</button>
+        <button onclick="jQuery().articulate('stop');">Stop</button>
+      </p>
+
+
+      <div class="use">
+        <h3>Use Cases</h3>
+
+        <p>The inspiration for Articulate.js came from the idea that with a simple click, I can enjoy having Web site articles read to me when 
+        it's not convenient or desirable to be staring at a screen &mdash; particularly when using my phone. Maybe while lying in the park with my 
+        eyes closed or while I'm preoccupied with preparing dinner. The goal was to allow developers to make the appropriate customizations 
+        so that it sounds less like a screen reader and more like a friend is reading the Web page to you.</p>
+
+        <p>Of course, Articulate.js can be used as a voice option for anything on the page, from enunciating a single word to conveying content 
+        not displayed on the screen. If you're interested, download the source code and experiment. And, most importantly, have fun with it!</p>
+      </div>
+
+      <p>
+        <button onclick="jQuery('div.use').articulate('speak');">Speak this Section</button>
+        <button onclick="jQuery().articulate('stop');">Stop</button>
+      </p>
+
+
+      <div class="about">
+        <h3>About Adam Coti</h3>
+
+        <p>I've been a freelance front-end Web developer for twenty years. My availability varies, but feel free to contact me if you're 
+        interested in the services I offer. My Web site with portfolio and client list is at 
+        <a href="http://www.purefreedom.com" rel="newwindow">www.purefreedom.com</a>. Also, take a look at some recent articles I've written for 
+        <a href="https://css-tricks.com/author/adamcoti/" rel="newWindow">CSS-Tricks</a>.</p>
+      </div>
+
+      <p>
+        <button onclick="jQuery('div.about').articulate('speak');">Speak this Section</button>
+        <button onclick="jQuery().articulate('stop');">Stop</button>
+      </p>
+
+    </main>
+
+    <footer>
+      <div class="copyright">&copy; 2023 Adam Coti. All rights reserved.</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

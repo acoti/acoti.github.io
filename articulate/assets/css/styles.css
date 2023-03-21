@@ -1,0 +1,188 @@
+/*
+
+CSS3 Normalizing
+
+*/
+
+html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; overflow-y: scroll; }
+body { width: 100%; font-size: 100%; padding: 0; margin: 0; }
+img { display: block; max-width: 100%; border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+table td, table th { padding: 0; }
+a { text-decoration: none; background: transparent; outline: none; }
+a:hover, a:active { outline: none; }
+ul { padding: 0; margin: 0; list-style: none; }
+ul li { padding: 0; }
+figure, figcaption { padding: 0; margin: 0; }
+sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+button, input, optgroup, select, textarea { font: inherit; color: inherit; margin: 0; }
+input[type="checkbox"], input[type="radio"] { padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; box-sizing: content-box; }
+textarea { overflow: auto; }
+
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+q::before{ content: open-quote; }
+q::after{ content: close-quote; }
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+code { display: inline-block; padding: 2px 5px 2px 5px; background-color: #f3f3f3; }
+
+
+
+
+
+/*
+
+Web Fonts
+
+*/
+
+/* @font-face {
+  font-family: 'MyWebFont';
+  src: url('../fonts/name.woff2') format('woff2'),
+       url('../fonts/name.woff') format('woff'),
+       url('../fonts/name.ttf') format('truetype');
+}
+ */
+
+
+
+
+
+
+/*
+
+Global Styles
+
+*/
+
+html { background-color: #fff; }
+body { font-family: 'Nunito Sans',tahoma, sans-serif; color: #000; margin: 0 auto 0 auto; }
+p { font-size: 135%; line-height: 1.4; margin: 0 0 25px 0; }
+p a { color: #000; text-decoration: underline; }
+div.page-container { padding: 0 5% 0 5%; margin: 0 auto 0 auto; }
+.group::after { content: ""; display: table; clear: both; }
+
+*.first { margin-top: 0 !important; }
+*.last { margin-bottom: 0 !important; }
+*.last-in-column { margin-bottom: 0 !important; }
+
+
+
+
+
+
+
+
+/*
+
+Column Layouts
+
+*/
+
+div.container { width: 100%; }
+div.container::after { content: ""; display: table; clear: both; }
+div.container div.column { float: left; }
+
+
+
+
+
+
+
+
+/*
+
+Common Styles
+
+*/
+
+header { width: 100%; display: flex; flex-direction: column; justify-content: center; font-style: italic; color: #30c; text-align: center; text-shadow: 1px 1px 1px #666; }
+header { background-color: #f5f0ff; background-image: url(../images/header.png), url(../images/header.png); background-position: left center, right center; background-size: 25% auto; background-repeat: no-repeat; padding: 60px 0 60px 0; margin: 0 0 20px 0; }
+header h1 { font-size: 475%; letter-spacing: 0.05em; font-weight: 800; padding: 0; margin: 0 0 0px 0; }
+header h2 { font-size: 225%; font-weight: 800; margin: 0; }
+
+nav { margin: 0 0 60px 0; }
+nav ul { display: flex; justify-content: center; }
+nav ul li { font-size: 120%; font-weight: 700; text-transform: uppercase; opacity: 0.4; margin: 0 20px 0 0; }
+nav ul li a { color: #000; }
+nav ul li:hover { opacity: 1.0; }
+nav ul li:last-child { margin-right: 0; }
+
+body.home nav li:nth-child(1) { opacity: 1.0; }
+body.demos nav li:nth-child(2) { opacity: 1.0; }
+body.guide nav li:nth-child(3) { opacity: 1.0; }
+body.download nav li:nth-child(4) { opacity: 1.0; }
+
+main { min-height: 500px; }
+main h3 { font-size: 175%; font-weight: 700; padding: 10px 0 10px 10px; background-color: #ffdab9; margin: 50px 0 15px 0; }
+main p.code { text-align: center; margin-bottom: 30px; }
+main p.note { font-size: 100%; }
+main p button { margin: 0 0 10px 0; }
+main ul.bullets { width: 80%; list-style: disc; margin: 0 0 30px 50px; }
+main ul.bullets li { font-size: 120%; margin: 0 0 10px 0; }
+
+main table.guide { width: 100%; margin: 0 0 20px 0; }
+main table.guide caption { display: none; }
+main table.guide th { font-size: 110%; text-align: left; padding: 10px; border: 1px dotted #000; }
+main table.guide td { font-size: 110%; padding: 10px; border: 1px dotted #000; }
+main table.guide td code { font-size: 110%; }
+
+footer { display: flex; align-items: center; justify-content: space-between; font-size: 90%; padding: 10px 0 20px 0; border-top: 1px dotted #000; margin: 30px 0 0 0; }
+footer div.copyright { flex: 1; }
+footer div.share { flex: 1; }
+footer div.share ul { display: flex; justify-content: flex-end; }
+footer div.share ul li { width: 24px; height: 24px; margin: 0 0 0 8px; cursor: pointer; }
+footer div.share ul li svg { display: inline-block; width: 24px; height: 24px; }
+
+
+
+
+
+
+/*
+
+Responsive Styles
+
+*/
+
+@media only screen and (max-width: 767px) {
+    *.desktop { display: none !important; }
+    *.mobile { display: block !important; }
+    
+    div.page-container { width: 100%; max-width: 568px; }
+
+    div.container div.column { width: 100% !important; }
+    div.container div.column { padding-left: 0 !important; padding-right: 0 !important; }
+    div.container div.column { margin-left: 0 !important; margin-right: 0 !important; }
+
+    header { font-size: 2vw; background-image: none; padding: 30px 0 30px 0; }
+    nav { display: none; }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    *.desktop { display: block !important; }
+    span.desktop { display: inline !important; }
+    *.mobile { display: none !important; }
+
+    div.page-container { width: 768px; }
+
+    header { font-size: 70%; }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    *.desktop { display: block !important; }
+    span.desktop { display: inline !important; }
+    *.mobile { display: none !important; }
+    
+    div.page-container { max-width: 1280px; }
+}

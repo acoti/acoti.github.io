@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>The Effect of Reducing the Number of Seeds at Tennis Majors - Purefreedom Tennis</title>
+  <meta name="description" content="Will having only 16 seeded players increase the number of upsets?">
+  <meta property="og:title" content="The Effect of Reducing the Number of Seeds at Tennis Majors - Purefreedom Tennis">
+  <meta property="og:description" content="Will having only 16 seeded players increase the number of upsets?">
+  <meta property="og:site_name" content="Purefreedom Tennis">
+
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+  <script src="assets/js/highcharts.js"></script>
+  <script src="assets/js/jquery.highchartTable.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/code.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i,700" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="content-container">
+
+    <main>
+      <h1>The Effect of Reducing the Number of Seeds at Tennis Majors</h1>
+
+      <div class="author">By Adam Coti<br><a href="http://www.purefreedom.com" class="newWindow">www.purefreedom.com</a></div>
+
+      <div class="back-to-home"><a href="../index.htm">Back to Home Page</a></div>
+
+      <h2>Introduction</h2>
+
+      <p>Beginning with the 2019 Australian Open, the number of seeded players at majors will be cut in half to 16, 
+      the first time it will be at that number in eighteen years. The expected result is more competitive tennis 
+      at the beginning of tournaments. But, from a historical perspective, will this really be the case? That is, 
+      after reverting to a draw of 16 seeds, will there be more upsets in the opening rounds? What follows is an 
+      analysis of 30,480 men's and women's matches at majors since 1988 that hopes to answer this question.</p>
+
+      <p>In addition, it may be helpful to investigate how often higher-seeded or higher-ranked players actually 
+      prevail in any of their matches at majors. Are the chances of a favored player winning a match 
+      affected by which round it's played? Are men's favorites more likely to win than women's favorites? Three 
+      charts at the end of the report shed some light on this.</p>
+
+      <h2>The Success Rate of Seeded Players By Round</h2>
+
+      <p>From when the Australian Open moved to a 128-player draw in 1988 until Roland Garros in 2001, there were 54 
+      majors played with a draw of 16 seeds. This was compared to the 66 majors played through 2017 that had a 
+      draw of 32 seeds. To facilitate a more direct comparison, the results from these 66 majors were subdivided 
+      into two groups of seeds, 1–16 and 17–32.</p>
+      
+      <p>Note that the following data represent averages based on the outcome of all matches at majors. It does not consider 
+      how an individual player advanced, whether it be from winning a match or due to an opponent's retirement or walkover 
+      &mdash; it's simply a calculation of how many players in each category remained after each round. </p>
+
+      <section>
+        <h3>Men's Draw</h3>
+
+        <div class="chart desktop" id="seed-compare-men"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-1.png" alt=""></div>
+        
+        <table class="data desktop seeds-summary">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th class="dotted"></th>
+              <th colspan="2" class="dotted">Majors with<br>16 Seeds<br>(1988–2001)</th>
+              <th colspan="3">Majors with 32 Seeds<br>(2001–2017)</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th class="dotted">Total</th>
+              <th>Seeds<br>(1–16)</th>
+              <th class="dotted">Un-<br>seeded</th>
+              <th>Seeds<br>(1–16)</th>
+              <th>Seeds<br>(17–32)</th>
+              <th>Un-<br>seeded</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Start</td>
+              <td>128</td>
+              <td width="90">16.00</td>
+              <td width="90">112.00</td>
+              <td width="90">16.00</td>
+              <td width="90">16.00</td>
+              <td width="90">96.00</td>
+            </tr>
+            <tr>
+              <td>After First Round</td>
+              <td>64</td>
+              <td>12.88</td>
+              <td>51.12</td>
+              <td>13.91</td>
+              <td>11.75</td>
+              <td>38.34</td>
+            </tr>
+            <tr>
+              <td>After Second Round</td>
+              <td>32</td>
+              <td>10.28</td>
+              <td>21.72</td>
+              <td>11.84</td>
+              <td>8.41</td>
+              <td>11.75</td>
+            </tr>
+            <tr>
+              <td>After Third Round</td>
+              <td>16</td>
+              <td>8.03</td>
+              <td>7.97</td>
+              <td>9.20</td>
+              <td>3.11</td>
+              <td>3.69</td>
+            </tr>
+            <tr>
+              <td>After Fourth Round</td>
+              <td>8</td>
+              <td>5.20</td>
+              <td>2.80</td>
+              <td>5.86</td>
+              <td>1.24</td>
+              <td>0.89</td>
+            </tr>
+            <tr>
+              <td>After Quarterfinals</td>
+              <td>4</td>
+              <td>3.14</td>
+              <td>0.86</td>
+              <td>3.44</td>
+              <td>0.32</td>
+              <td>0.24</td>
+            </tr>
+            <tr>
+              <td>After Semifinals</td>
+              <td>2</td>
+              <td>1.81</td>
+              <td>0.19</td>
+              <td>1.77</td>
+              <td>0.11</td>
+              <td>0.12</td>
+            </tr>
+            <tr>
+              <td>Winner</td>
+              <td>1</td>
+              <td>0.96</td>
+              <td>0.04</td>
+              <td>0.92</td>
+              <td>0.05</td>
+              <td>0.03</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The sample set for the majors with 16 seeds is 6,858 matches; the sample set for the majors with 32 seeds is 8,382 matches.</p></li>
+            <li><p>A draw of 16 seeds had an average of roughly one fewer seeded player advancing out of the first and third rounds.</p></li>
+            <li><p>The largest discrepancy is in the second round as shown by the widest gap between the two lines in the chart.</p></li>
+            <li><p>Starting with the fourth round, the impact of reducing the number of seeds gradually decreases.</p></li>
+          </ul>
+        </div>
+
+        <br><br><br><br><br>
+
+        <h3>Women's Draw</h3>
+
+        <div class="chart desktop" id="seed-compare-women"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-2.png" alt=""></div>
+        
+        <table class="data desktop seeds-summary">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th class="dotted"></th>
+              <th colspan="2" class="dotted">Majors with<br>16 Seeds<br>(1988–2001)</th>
+              <th colspan="3">Majors with 32 Seeds<br>(2001–2017)</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th class="dotted">Total</th>
+              <th>Seeds<br>(1–16)</th>
+              <th class="dotted">Un-<br>seeded</th>
+              <th>Seeds<br>(1–16)</th>
+              <th>Seeds<br>(17–32)</th>
+              <th>Un-<br>seeded</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Start</td>
+              <td>128</td>
+              <td width="90">16.00</td>
+              <td width="90">112.00</td>
+              <td width="90">16.00</td>
+              <td width="90">16.00</td>
+              <td width="90">96.00</td>
+            </tr>
+            <tr>
+              <td>After First Round</td>
+              <td>64</td>
+              <td>14.00</td>
+              <td>50.00</td>
+              <td>14.10</td>
+              <td>11.52</td>
+              <td>38.39</td>
+            </tr>
+            <tr>
+              <td>After Second Round</td>
+              <td>32</td>
+              <td>12.27</td>
+              <td>19.73</td>
+              <td>12.03</td>
+              <td>7.86</td>
+              <td>12.12</td>
+            </tr>
+            <tr>
+              <td>After Third Round</td>
+              <td>16</td>
+              <td>9.97</td>
+              <td>6.03</td>
+              <td>9.18</td>
+              <td>3.08</td>
+              <td>3.75</td>
+            </tr>
+            <tr>
+              <td>After Fourth Round</td>
+              <td>8</td>
+              <td>6.41</td>
+              <td>1.59</td>
+              <td>5.60</td>
+              <td>1.23</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>After Quarterfinals</td>
+              <td>4</td>
+              <td>3.63</td>
+              <td>0.37</td>
+              <td>3.20</td>
+              <td>0.42</td>
+              <td>0.38</td>
+            </tr>
+            <tr>
+              <td>After Semifinals</td>
+              <td>2</td>
+              <td>1.94</td>
+              <td>0.06</td>
+              <td>1.74</td>
+              <td>0.17</td>
+              <td>0.09</td>
+            </tr>
+            <tr>
+              <td>Winner</td>
+              <td>1</td>
+              <td>1.00</td>
+              <td>0.00</td>
+              <td>0.89</td>
+              <td>0.05</td>
+              <td>0.06</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>The sample set for the majors with 16 seeds is 6,858 matches; the sample set for the majors with 32 seeds is 8,382 matches.</p></li>
+            <li><p>The overall impact of the number of seeds is not as great among the women as it is for the men as evidenced by the narrower gap between the two lines in the chart.</p></li>
+            <li><p>The largest discrepancies, almost identical, are in the third and fourth rounds.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+
+
+      <h2>The Competitiveness of Matches at Majors</h2>
+
+      <p>Every match played at a major has a favorite that can be objectively determined by seeding or ranking. That is, if 
+      two seeded players compete, then the one who is seeded higher is the favorite; if two unseeded players compete, then the one 
+      who is ranked higher is the favorite; if a seeded player competes against an unseeded player, then the seeded player is 
+      the favorite.</p>
+
+      <p>Using this as the basis, how often does the favorite actually win a match at a major? The following charts break 
+      this down by year, venue and round.</p>
+
+      <section>
+        <h3>By Year</h3>
+
+        <div class="chart desktop" id="ranking-year"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-3.png" alt=""></div>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Each year has a sample set of all four majors for a total of 508 matches in each of the men's and women's draw.</p></li>
+            <li><p>The success rate of favorites for men and women have generally been headed in opposite directions over the past decade.</p></li>
+            <li><p>For the men, the inflection point was in the late 1990s when the steady decline of performance by favorites was reversed and a persistent upward trend began.</p></li>
+            <li><p>For the women, the percentage of favorites winning has been in a steady decline over the past decade.</p></li>
+          </ul>
+        </div>
+
+        <br><br><br><br><br>
+
+        <h3>By Venue</h3>
+
+        <div class="chart desktop" id="ranking-major"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-4.png" alt=""></div>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Each major listed represents a sample set of 3,810 matches in each of the men's and women's draws.</p></li>
+            <li><p>For the women, the favorites win most often at the U.S. Open; they are upset most often at Roland Garros.</p></li>
+            <li><p>For the men, the favorites win most often at the Australian Open; they are upset most often at Wimbledon.</p></li>
+          </ul>
+        </div>
+
+        <br><br><br><br><br>
+
+        <h3>By Round</h3>
+
+        <div class="chart desktop" id="ranking-round"></div>
+
+        <div class="chart-sub mobile"><img src="assets/images/chart-5.png" alt=""></div>
+
+        <div class="remarks">
+          <p>Note:</p>
+          <ul>
+            <li><p>Women's favorites win more consistently than men in the early rounds, yet endure more upsets in the semifinals and finals.</p></li>
+            <li><p>The most successful round for men's favorites is the fourth; for the women, it's the third.</p></li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <h2>Acknowledgments</h2>
+
+      <p>The raw data used for analysis was gathered from the glorious <a href="https://github.com/JeffSackmann/tennis_atp" class="newWindow">repository</a> 
+      of ATP and WTA match results compiled by Jeff Sackmann. A Microsoft Excel file is 
+      <a href="assets/excel/majors-seeds.xlsx">available for download</a> if you wish to view the raw data that I compiled.</p>
+
+      <footer>
+        &copy; 2023 Adam Coti
+      </footer>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="chart-data-section">
+      
+      <table class="highchart seed-compare-men" data-graph-container="#seed-compare-men" data-graph-type="line" data-graph-subtitle-text="1988–2017" data-graph-yaxis-1-title-text="Top 16 Seeds Remaining" data-graph-datalabels-enabled="0" data-graph-yaxis-1-max="18">
+        <caption>Men's Draw: Top 16 Seeds Remaining After Each Round</caption>
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Majors with 16 Seeds</th>
+            <th>Majors with 32 Seeds</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Start</td>
+            <td>16</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>1st Round</td>
+            <td>12.88</td>
+            <td>13.91</td>
+          </tr>
+          <tr>
+            <td>2nd Round</td>
+            <td>10.28</td>
+            <td>11.84</td>
+          </tr>
+          <tr>
+            <td>3rd Round</td>
+            <td>8.03</td>
+            <td>9.20</td>
+          </tr>
+          <tr>
+            <td>4th Round</td>
+            <td>5.20</td>
+            <td>5.86</td>
+          </tr>
+          <tr>
+            <td>QFs</td>
+            <td>3.14</td>
+            <td>3.44</td>
+          </tr>
+          <tr>
+            <td>SFs</td>
+            <td>1.81</td>
+            <td>1.77</td>
+          </tr>
+          <tr>
+            <td>Winner</td>
+            <td>0.96</td>
+            <td>0.92</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <table class="highchart seed-compare-women" data-graph-container="#seed-compare-women" data-graph-type="line" data-graph-subtitle-text="1988–2017" data-graph-yaxis-1-title-text="Top 16 Seeds Remaining" data-graph-datalabels-enabled="0" data-graph-yaxis-1-max="18">
+        <caption>Women's Draw: Top 16 Seeds Remaining After Each Round</caption>
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Majors with 16 Seeds</th>
+            <th>Majors with 32 Seeds</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Start</td>
+            <td>16</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>1st Round</td>
+            <td>14.00</td>
+            <td>14.10</td>
+          </tr>
+          <tr>
+            <td>2nd Round</td>
+            <td>12.27</td>
+            <td>12.03</td>
+          </tr>
+          <tr>
+            <td>3rd Round</td>
+            <td>9.97</td>
+            <td>9.18</td>
+          </tr>
+          <tr>
+            <td>4th Round</td>
+            <td>6.41</td>
+            <td>5.60</td>
+          </tr>
+          <tr>
+            <td>QFs</td>
+            <td>3.63</td>
+            <td>3.20</td>
+          </tr>
+          <tr>
+            <td>SFs</td>
+            <td>1.94</td>
+            <td>1.74</td>
+          </tr>
+          <tr>
+            <td>Winner</td>
+            <td>1.00</td>
+            <td>0.89</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    
+      <table class="highchart ranking-year" data-graph-container="#ranking-year" data-graph-type="line" data-graph-subtitle-text="Three-Year Moving Average from 1988–2017" data-graph-yaxis-1-title-text="Percentage" data-graph-datalabels-enabled="0" data-graph-yaxis-1-min="60" data-graph-yaxis-1-max="80">
+        <caption>Percentage of Favorites at Majors Winning by Year</caption>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Men's Draw</th>
+            <th>Women's Draw</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1990</td>
+            <td>70.6%</td>
+            <td>73.0%</td>
+          </tr>
+          <tr>
+            <td>1991</td>
+            <td>68.9%</td>
+            <td>73.8%</td>
+          </tr>
+          <tr>
+            <td>1992</td>
+            <td>67.9%</td>
+            <td>75.3%</td>
+          </tr>
+          <tr>
+            <td>1993</td>
+            <td>67.3%</td>
+            <td>75.9%</td>
+          </tr>
+          <tr>
+            <td>1994</td>
+            <td>67.9%</td>
+            <td>74.0%</td>
+          </tr>
+          <tr>
+            <td>1995</td>
+            <td>68.0%</td>
+            <td>73.3%</td>
+          </tr>
+          <tr>
+            <td>1996</td>
+            <td>67.5%</td>
+            <td>71.7%</td>
+          </tr>
+          <tr>
+            <td>1997</td>
+            <td>66.7%</td>
+            <td>72.3%</td>
+          </tr>
+          <tr>
+            <td>1998</td>
+            <td>65.5%</td>
+            <td>73.0%</td>
+          </tr>
+          <tr>
+            <td>1999</td>
+            <td>65.0%</td>
+            <td>73.0%</td>
+          </tr>
+          <tr>
+            <td>2000</td>
+            <td>66.2%</td>
+            <td>72.2%</td>
+          </tr>
+          <tr>
+            <td>2001</td>
+            <td>67.6%</td>
+            <td>71.0%</td>
+          </tr>
+          <tr>
+            <td>2002</td>
+            <td>68.2%</td>
+            <td>70.5%</td>
+          </tr>
+          <tr>
+            <td>2003</td>
+            <td>68.7%</td>
+            <td>72.5%</td>
+          </tr>
+          <tr>
+            <td>2004</td>
+            <td>68.3%</td>
+            <td>72.0%</td>
+          </tr>
+          <tr>
+            <td>2005</td>
+            <td>69.6%</td>
+            <td>72.6%</td>
+          </tr>
+          <tr>
+            <td>2006</td>
+            <td>69.8%</td>
+            <td>71.2%</td>
+          </tr>
+          <tr>
+            <td>2007</td>
+            <td>71.7%</td>
+            <td>72.4%</td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>71.7%</td>
+            <td>71.9%</td>
+          </tr>
+          <tr>
+            <td>2009</td>
+            <td>73.0%</td>
+            <td>72.0%</td>
+          </tr>
+          <tr>
+            <td>2010</td>
+            <td>72.9%</td>
+            <td>71.2%</td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td>73.8%</td>
+            <td>71.0%</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>73.8%</td>
+            <td>70.5%</td>
+          </tr>
+          <tr>
+            <td>2013</td>
+            <td>74.3%</td>
+            <td>69.8%</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>74.2%</td>
+            <td>69.6%</td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td>74.5%</td>
+            <td>69.2%</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>74.3%</td>
+            <td>69.0%</td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>73.4%</td>
+            <td>67.9%</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table class="highchart ranking-major" data-graph-container="#ranking-major" data-graph-type="column" data-graph-subtitle-text="1988–2017" data-graph-yaxis-1-title-text="Percentage" data-graph-yaxis-1-min="60" data-graph-yaxis-1-max="80" data-graph-datalabels-enabled="1" data-graph-datalabels-formatter="chartPercent">
+        <caption>Percentage of Favorites at Majors Winning by Venue</caption>
+
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Men's Draw</th>
+            <th>Women's Draw</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Australian Open</td>
+            <td>71.5%</td>
+            <td>71.7%</td>
+          </tr>
+          <tr>
+            <td>Roland Garros</td>
+            <td>69.6%</td>
+            <td>70.8%</td>
+          </tr>
+          <tr>
+            <td>Wimbledon</td>
+            <td>69.0%</td>
+            <td>71.4%</td>
+          </tr>
+          <tr>
+            <td>U.S. Open</td>
+            <td>70.6%</td>
+            <td>72.9%</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    
+      <table class="highchart ranking-round" data-graph-container="#ranking-round" data-graph-type="line" data-graph-subtitle-text="1988–2017" data-graph-yaxis-1-title-text="Percentage" data-graph-datalabels-enabled="0" data-graph-yaxis-1-min="60" data-graph-yaxis-1-max="80">
+        <caption>Percentage of Favorites at Majors Winning by Round</caption>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Men's Draw</th>
+            <th>Women's Draw</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First Round</td>
+            <td>68.4%</td>
+            <td>69.5%</td>
+          </tr>
+          <tr>
+            <td>Second Round</td>
+            <td>71.9%</td>
+            <td>74.1%</td>
+          </tr>
+          <tr>
+            <td>Third Round</td>
+            <td>71.8%</td>
+            <td>75.1%</td>
+          </tr>
+          <tr>
+            <td>Fourth Round</td>
+            <td>73.4%</td>
+            <td>74.4%</td>
+          </tr>
+          <tr>
+            <td>Quarterfinals</td>
+            <td>71.9%</td>
+            <td>73.1%</td>
+          </tr>
+          <tr>
+            <td>Semifinals</td>
+            <td>71.3%</td>
+            <td>68.3%</td>
+          </tr>
+          <tr>
+            <td>Finals</td>
+            <td>65.8%</td>
+            <td>63.3%</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    </div>
+    
+  </div>
+
+</body>
+</html>
